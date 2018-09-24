@@ -1,7 +1,7 @@
-package com.javarush.task.task04.task0418;
+package com.javarush.task.task04.task0428;
 
 /* 
-Минимум двух чисел
+Положительное число
 */
 
 import java.io.*;
@@ -13,16 +13,13 @@ public class Solution {
 
         int a = Integer.parseInt(reader.readLine());
         int b = Integer.parseInt(reader.readLine());
-        int c;
+        int c = Integer.parseInt(reader.readLine());
+        int i = 0;
 
-        if (a < b) {
-            c = a;
-        } else if (b < a) {
-            c = b;
-        } else {
-            c = a;
-        }
+        if (a > 0) i++;
+        if (b > 0) i++;
+        if (c > 0) i++;
 
-        System.out.println(c);
+        System.out.println(i);
     }
 }

@@ -1,7 +1,7 @@
-package com.javarush.task.task04.task0418;
+package com.javarush.task.task04.task0419;
 
 /* 
-Минимум двух чисел
+Максимум четырех чисел
 */
 
 import java.io.*;
@@ -13,16 +13,13 @@ public class Solution {
 
         int a = Integer.parseInt(reader.readLine());
         int b = Integer.parseInt(reader.readLine());
-        int c;
+        int c = Integer.parseInt(reader.readLine());
+        int d = Integer.parseInt(reader.readLine());
 
-        if (a < b) {
-            c = a;
-        } else if (b < a) {
-            c = b;
-        } else {
-            c = a;
-        }
+        System.out.println(maxValue(maxValue(a, b), maxValue(c, d)));
+    }
 
-        System.out.println(c);
+    public static int maxValue(int a, int b) {
+        return Math.max(a, b);
     }
 }

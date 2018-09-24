@@ -1,7 +1,7 @@
-package com.javarush.task.task04.task0418;
+package com.javarush.task.task04.task0425;
 
 /* 
-Минимум двух чисел
+Цель установлена!
 */
 
 import java.io.*;
@@ -13,16 +13,18 @@ public class Solution {
 
         int a = Integer.parseInt(reader.readLine());
         int b = Integer.parseInt(reader.readLine());
-        int c;
+        int res = 0;
 
-        if (a < b) {
-            c = a;
-        } else if (b < a) {
-            c = b;
+        if (a > 0 && b > 0) {
+            res = 1;
+        } else if (a < 0 && b > 0) {
+            res = 2;
+        } else if (a < 0 && b < 0) {
+            res = 3;
         } else {
-            c = a;
+            res = 4;
         }
 
-        System.out.println(c);
+        System.out.println(res);
     }
 }

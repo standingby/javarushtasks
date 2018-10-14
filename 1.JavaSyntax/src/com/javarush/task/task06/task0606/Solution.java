@@ -15,13 +15,20 @@ public class Solution {
         //напишите тут ваш код
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        int num = Integer.parseInt(reader.readLine());
+        //int num = Integer.parseInt(reader.readLine());
+        String num = reader.readLine();
+        int n;
 
-        if (num % 2 == 0) {
-            even++;
-        } else {
-            odd++;
+        String[] numbers = num.split("");
+        for (String number : numbers) {
+            n = Integer.parseInt(number);
+            if (n % 2 == 0) {
+                even++;
+            } else {
+                odd++;
+            }
         }
+
 
         System.out.println("Even: " + even + " Odd: " + odd);
     }
